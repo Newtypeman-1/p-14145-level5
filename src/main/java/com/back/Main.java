@@ -13,13 +13,13 @@ public class Main {
         System.out.println("== 명언 앱 ==");
         while(true){
             System.out.print("명령) ");
-            String answer = scan.nextLine();
+            String answer = scan.nextLine().trim();
 
             if(answer.equals("등록")){
                 System.out.print("명언: ");
-                String line = scan.nextLine();
+                String line = scan.nextLine().trim();
                 System.out.print("작가: ");
-                String auth = scan.nextLine();
+                String auth = scan.nextLine().trim();
 
                 WiseSaying wise = new WiseSaying(idx, line, auth);
                 list.add(wise);
