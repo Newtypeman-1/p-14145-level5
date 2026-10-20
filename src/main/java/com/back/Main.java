@@ -37,32 +37,6 @@ public class Main {
                     WiseSaying wise = list.get(i - 1);
                     System.out.println(wise.num() + " / " + wise.auth() + " / " + wise.line());
                 }
-            }else if(answer.startsWith("삭제?id=")){
-                if(list.isEmpty()){
-                    System.out.println("삭제할 명언이 없습니다.");
-                }else{
-                    try {
-                        String answerSplit = answer.split("=")[1];
-                        int num = Integer.parseInt(answerSplit);
-                        boolean isFound = false;
-
-                        for (WiseSaying wise : list) {
-                            if (wise.num() == num) {
-                                list.remove(wise);
-                                System.out.println(num + "번 명언이 삭제되었습니다.");
-                                isFound = true;
-                                break;
-                            }
-                        }
-
-                        if (!isFound) {
-                            System.out.println("없는 번호입니다.");
-                        }
-                    } catch(NumberFormatException e){
-                        e.printStackTrace();
-                        System.out.println("번호만 입력하세요.");
-                    }
-                }
             }else if(answer.equals("종료")){
                 System.out.println("시스템을 종료합니다.");
                 break;
